@@ -1,0 +1,19 @@
+{
+    "name": "soares/project_routes",
+    "description": "dev",
+    "type": "project",
+    "license": "mit",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    },
+    "authors": [
+        {
+            "name": "darciosoares",
+            "email": "darciosoares28@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
