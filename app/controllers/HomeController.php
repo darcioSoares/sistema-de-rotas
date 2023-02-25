@@ -1,7 +1,11 @@
 <?php
-namespace app\controller;
+namespace app\controllers;
 
 Class HomeController
 {
 
+    public function index()
+    {
+        var_dump('index');
+    }
 }
