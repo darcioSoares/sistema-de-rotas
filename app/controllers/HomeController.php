@@ -6,6 +6,6 @@ Class HomeController
 
     public function index()
     {
-        var_dump('index');
+        var_dump('index do controller');
     }
 }
