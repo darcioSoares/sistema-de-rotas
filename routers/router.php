@@ -2,7 +2,7 @@
 
 function load(string $controller, string $action)
 {
-
+    
     try{
         //se controller existe
         $controllerNamespace = "app\\controllers\\{$controller}";
@@ -19,7 +19,7 @@ function load(string $controller, string $action)
             throw new Exception("O metodo $action não existe no controller $controller");
         }
 
-        $controllerInstance->$action();
+        $controllerInstance->$action((object) $_REQUEST);
         
     }catch(Exception $e)
     {
@@ -31,11 +31,11 @@ function load(string $controller, string $action)
 
 $router = [
     'GET' => [
-        "/" => load("HomeController", "index"),
-        "/contact" => load("ContactController", "index")
+        "/" => fn()=> load("HomeController", "index"),
+        "/contact" => fn()=> load("ContactController", "index")
     ],
     'POST' => [
-        "/contact" => load("ContactController", "store"),
+        "/contact" => fn()=> load("ContactController", "store"),
     ],
 ];
 
