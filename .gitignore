@@ -1,1 +1,3 @@
 /vendor/
+app/storage/*
+app/cache/*

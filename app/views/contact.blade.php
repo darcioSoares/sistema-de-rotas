@@ -16,4 +16,12 @@
         </div>
         <button type="submit">Enviar</button>
     </form>
+
+    <hr>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <button>upload</button>
+    </form>
+
 @endsection

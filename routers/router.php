@@ -19,7 +19,7 @@ function load(string $controller, string $action)
             throw new Exception("O metodo $action não existe no controller $controller");
         }
 
-        $controllerInstance->$action((object) $_REQUEST);
+        $controllerInstance->$action((object) $_REQUEST, $_FILES);
         
     }catch(Exception $e)
     {
@@ -36,6 +36,7 @@ $router = [
     ],
     'POST' => [
         "/contact" => fn()=> load("ContactController", "store"),
+        "/upload" => fn()=> load("ContactController", "upload"),
     ],
 ];
 
